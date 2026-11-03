@@ -1,0 +1,29 @@
+# Local editor credentials
+.env
+.env.*
+!.env.example
+
+# Runtime state from the live NGINX config editor
+nginx/control/*
+!nginx/control/.gitkeep
+
+# Node dependencies / build artifacts
+node_modules/
+**/node_modules/
+dist/
+build/
+coverage/
+
+# Logs, local files, and OS/editor artifacts
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+__pycache__/
+*.pyc
