@@ -178,20 +178,6 @@ njs/                        MCP response observer
 scripts/                    Demo helper script
 ```
 
-## Publishing to GitHub
-
-```bash
-git init
-git branch -M main
-git add .
-git status
-git commit -m "Initial commit: NGINX MCP Mission Control demo"
-git remote add origin https://github.com/YOUR-USERNAME/nginx-mcp-mission-control.git
-git push -u origin main
-```
-
-Create an **empty** repository on GitHub first. GitHub HTTPS pushes require a personal access token or a credential helper, **not** your GitHub account password. Alternatively, use `gh auth login` and `gh repo create` with GitHub CLI.
-
 ## Limitations and security notes
 
 - **Demo only:** public fake API keys, HTTP-only access, anonymous Grafana, and a configuration editor make this unsuitable for internet exposure.
