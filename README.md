@@ -69,8 +69,6 @@ Open:
 | Prometheus | `http://YOUR-VM-IP:9090` |
 | Direct MCP (from VM only) | `http://localhost:8001/mcp` |
 
-**Security:** `.env` is excluded from Git. Never commit your real editor password. The `NGINX_EDITOR_TOKEN` variable is passed to the UI container. The config editor is for a trusted, isolated demo environment only.
-
 ## Demo credentials (fictional, intentionally public)
 
 | API key | Role | `list_pods` | `create_pod` | `delete_pod` |
@@ -139,8 +137,6 @@ NGINX `map` declarations are evaluated when their variables are used, rather tha
 5. Return to Mission Control and rerun the **Burst: 25 HTTP requests** test.
 
 The burst test issues 25 read-only `list_pods` HTTP POSTs; the admitted/rejected counts can vary with timing and existing rate-limit state. A green validation message indicates validation and a reload request, not a full end-to-end verification of all traffic.
-
-**Important:** The editor changes `nginx/nginx.conf` on the **host**, because that file is bind-mounted. Review `git diff` before committing after a demo. The `nginx/control/` directory contains runtime editor state and is excluded from Git except for `.gitkeep`.
 
 ## Common Docker commands
 
